@@ -1,0 +1,9 @@
+C:/GITRepos/imgui/build/CMakeFiles/Experimental.dir
+C:/GITRepos/imgui/build/CMakeFiles/Nightly.dir
+C:/GITRepos/imgui/build/CMakeFiles/Continuous.dir
+C:/GITRepos/imgui/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/GITRepos/imgui/build/CMakeFiles/demo.dir
+C:/GITRepos/imgui/build/CMakeFiles/PACKAGE.dir
+C:/GITRepos/imgui/build/CMakeFiles/RUN_TESTS.dir
+C:/GITRepos/imgui/build/CMakeFiles/ALL_BUILD.dir
+C:/GITRepos/imgui/build/CMakeFiles/ZERO_CHECK.dir
