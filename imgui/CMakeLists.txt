@@ -38,6 +38,7 @@ add_executable(demo Application.cpp
                           imgui/imgui_tables.cpp
                           imgui/imgui_widgets.cpp
                           imgui/imgui.cpp
+                          classes/Log.cpp
                           ${BCKD_FILE}
                           ${MAIN_FILE}
                           ${IMPL_FILE}

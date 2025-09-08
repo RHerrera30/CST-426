@@ -1,8 +1,8 @@
-# Install script for directory: C:/GITRepos/CST-426
+# Install script for directory: C:/GITRepos/CST-426/imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/HelloWorld")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/tictactoe")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

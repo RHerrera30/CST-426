@@ -1,0 +1,7 @@
+Hello
+Hello
+Hello
+Hello
+[INFO] Game started!
+[WARNING] Gnome in the building
+[ERROR] THE GNOME IS BITING

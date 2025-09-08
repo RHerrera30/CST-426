@@ -1,8 +1,11 @@
 #include "Application.h"
 #include "imgui/imgui.h"
+#include "classes/Log.h"
 
 //CHANGES
 //Included fstream, iostream and string for file reading.
+//Added Log class to hold log messages, print them to a file, and show in the IMGUI window.
+//Added Log class to my cmake list
 
 //RESOURCES
 //https://www.w3schools.com/cpp/cpp_files.asp 
@@ -25,9 +28,13 @@ namespace ClassGame {
         //
         void GameStartUp() 
         {
-                Log logFile;
-                std::string logInfo = "Here is my log info.";
-                logFile.writeToFile(logInfo);
+                // Log logFile;
+                // logFile.writeToFile("Hello");
+                Log::writeToFile("Game started!", Log::INFO);
+                Log::writeToFile("Gnome in the building", Log::WARNING);
+                Log::writeToFile("THE GNOME IS BITING", Log::ERROR);
+                // std::string logInfo = "Here is my log info.";
+                // logFile.writeToFile(logInfo);
         }
 
         //

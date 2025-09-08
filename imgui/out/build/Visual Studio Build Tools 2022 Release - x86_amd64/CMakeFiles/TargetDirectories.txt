@@ -1,0 +1,9 @@
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/Experimental.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/Nightly.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/Continuous.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/NightlyMemoryCheck.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/demo.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/PACKAGE.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/RUN_TESTS.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/ALL_BUILD.dir
+C:/GITRepos/CST-426/imgui/out/build/Visual Studio Build Tools 2022 Release - x86_amd64/CMakeFiles/ZERO_CHECK.dir
