@@ -12,8 +12,9 @@ class Log
         ERROR
     };
 
-    static void writeToFile(const std::string& logInfo, logLevel level);
-    static const std::vector<std::string>& getMessages();
+    static logLevel currentLevel;
 
-    static std::vector<std::string> messages;
+    static void initialize(logLevel level);
+    static void setLevel(logLevel level); 
+    static void write(const std::string& logInfo, logLevel level); 
 };

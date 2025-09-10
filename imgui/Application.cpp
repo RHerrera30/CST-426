@@ -4,12 +4,19 @@
 
 //CHANGES
 //Included fstream, iostream and string for file reading.
-//Added Log class to hold log messages, print them to a file, and show in the IMGUI window.
-//Added Log class to my cmake list
+//Added Log.cpp and Log.h to take log messages, write them to a file, and print them to the console.
+//Added Log.cpp to my Cmake list
 
 //RESOURCES
-//https://www.w3schools.com/cpp/cpp_files.asp 
-//https://www.w3schools.com/cpp/cpp_enum.asp 
+/*
+https://learnxinyminutes.com/c++/
+https://www.w3schools.com/cpp/cpp_files.asp 
+https://www.w3schools.com/cpp/cpp_enum.asp 
+https://www.w3schools.com/cpp/cpp_classes.asp
+https://www.w3schools.com/cpp/cpp_class_methods.asp
+https://www.geeksforgeeks.org/cpp/how-can-i-solve-the-error-lnk2019-unresolved-external-symbol/
+https://medium.com/@kunal-mod/c-best-practices-understanding-the-need-for-splitting-class-declaration-and-definitions-into-389d523695b9
+*/
 
 #include <iostream>
 #include <fstream>
@@ -28,13 +35,13 @@ namespace ClassGame {
         //
         void GameStartUp() 
         {
-                // Log logFile;
-                // logFile.writeToFile("Hello");
-                Log::writeToFile("Game started!", Log::INFO);
-                Log::writeToFile("Gnome in the building", Log::WARNING);
-                Log::writeToFile("THE GNOME IS BITING", Log::ERROR);
-                // std::string logInfo = "Here is my log info.";
-                // logFile.writeToFile(logInfo);
+                Log::initialize(Log::INFO);
+                Log::write("Game started!", Log::INFO);
+                Log::setLevel(Log::WARNING);
+                Log::write("Gnome in the building", Log::WARNING);
+                Log::write("GNOME APPROACHING", Log::WARNING);
+                Log::setLevel(Log::ERROR);
+                Log::write("THE GNOME IS BITING", Log::ERROR);
         }
 
         //

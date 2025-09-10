@@ -1,2 +1,2 @@
 # CST-426
- 
+I started this assignment by focusing on how to write to a file from the main game class. Once I was able to write to a log file, I created a Log class to write to my log file, set log levels, and print my log messages to the console. I was confused by the purpose of setting the log level and initializing the log at first, but asked the professor and realized it's to make sure only messages of a certain level are being recorded for clarity. File linking took the longest amount of time to figure out in this assignment. A list of changes I made and resources I consulted can be found at the top of Application.cpp.

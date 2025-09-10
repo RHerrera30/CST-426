@@ -2,12 +2,34 @@
 #include <fstream>
 #include <iostream>
 
-//Where I'll store my messages
-std::vector<std::string> Log::messages;
+    //The log level I will print and write to my file
+    Log::logLevel Log::currentLevel;
 
-    void Log::writeToFile(const std::string& logInfo, logLevel level)
+    //If there is a file already written to, wipe the file clean, otherwise makes a new one. Also sets initial log level.
+        void Log::initialize(logLevel level)
     {
-        //String to hold the log level of the incoming log
+        std::ofstream newFile("logFile.txt", std::ios::trunc);
+        currentLevel = level;
+
+        newFile << "Logging initialized." << std::endl;
+        std::cout << "Logging initialized." << std::endl;
+    }
+
+    //Sets level of logs to be written to file and printed to console.
+        void Log::setLevel(logLevel level)
+    {
+        currentLevel = level;
+
+        std::ofstream file("logFile.txt", std::ios::app);
+        file << "Updated log level." << std::endl;
+
+        std::cout << "Updated log level. " << std::endl;
+    }
+
+    //Writes message to my log file and prints it in the console. Does not write or print if message is not within the log level.
+    void Log::write(const std::string& logInfo, logLevel level)
+    {
+        //String to hold the log level of the incoming log.
         std::string messageLevel;
 
         //Changes the level of the log
@@ -18,31 +40,28 @@ std::vector<std::string> Log::messages;
             case ERROR: messageLevel = "[ERROR] "; break;
         }
 
+        //Check if the log is the current log level, if it isn't then don't print it
+        if(level != currentLevel)
+        {
+            return;
+        }
+
         //Put the log level and log info into one message
         std::string logMessage = messageLevel.append(logInfo);
 
-        //Store the message in memory.
-        messages.push_back(logMessage);
+        //Print my log message to the console
+        std::cout << logMessage << std::endl;
 
-        //Declare my log file and make it appendable
-        std::ofstream MyFile("logFile.txt", std::ios::app);
+        //Open and append to my logFile
+        std::ofstream file("logFile.txt", std::ios::app);
 
-        //Check to make sure my file exists before I try to print to it
-        if (!MyFile) {
+        //Check to make sure my file exists
+        if (!file) {
             std::cerr << "Failed to open logFile.txt!" << std::endl;
             return;
         }
 
-        //Print my log message to the log file
-        MyFile << logMessage <<std::endl;
-
-        MyFile.close();
-
-        //Just making sure I made it to the bottom of this method
-        std::cout << "writeToFile called";
+        //Write my log message to the log file and close the file
+        file << logMessage <<std::endl;
+        file.close();
     };
-
-    const std::vector<std::string>& Log::getMessages()
-    {
-        return messages;
-    }

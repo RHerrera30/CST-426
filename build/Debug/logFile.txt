@@ -1,7 +1,7 @@
-Hello
-Hello
-Hello
-Hello
+Logging initialized.
 [INFO] Game started!
+Updated log level.
 [WARNING] Gnome in the building
+[WARNING] GNOME APPROACHING
+Updated log level.
 [ERROR] THE GNOME IS BITING
